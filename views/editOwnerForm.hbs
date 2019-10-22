@@ -1,0 +1,12 @@
+<h1>Edit Business List</h1>
+
+<form action="/owner/{{_id}}?_method=PUT" method="POST">
+    <input type='text' name="name" placeholder="Name" value="{{name}}">
+    <input type='number' name="created" placeholder="Created" value="{{created}}">
+    <input type='text' name="city" placeholder="City" value="{{city}}">
+    <input type='text' name="state" placeholder="State" value="{{state}}">
+
+
+    <input type="submit" value="Save" />
+
+</form>
