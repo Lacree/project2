@@ -17,16 +17,9 @@ app.use(express.static(__dirname + "/public"))
 
 app.set('view engine', 'hbs')
 
-
-/* Step 4
- *
- * add router for the application to use. The first argument is a prefix to all
- * the paths defined in the router.
- */
-app.use('/', userRouter)
-app.use('/', productRouter)
-app.use('/', ownerRouter)
-
+app.use('/user', userRouter)
+app.use('/product', productRouter)
+app.use('/owner', ownerRouter)
 
 const PORT = process.env.PORT || 3000
 

@@ -4,19 +4,19 @@ const ProductApi = require('../models/Product.js')
 
 const productRouter = express.Router()
 
-prodcutRouter.get('/product/edit/:id', (req, res) => {
+prodcutRouter.get('/edit/:id', (req, res) => {
     ProductApi.getOneProduct(req.params.id)
         .then((singleProduct) => {
             res.render('editProductForm', singleProduct)
         })
 })
 
-productRouter.get('/product/new', (req, res) => {
+productRouter.get('/new', (req, res) => {
     res.render('createProductForm')
 })
 
 //getAll
-productRouter.get('/product', (req, res) => {
+productRouter.get('/', (req, res) => {
     ProductApi.getAllProducts()
         .then((allProducts) => {
             res.render('allProducts', { allProducts })
@@ -24,7 +24,7 @@ productRouter.get('/product', (req, res) => {
 })
 
 //getOne
-productRouter.get('/product/:id', (req, res) => {
+productRouter.get('/:id', (req, res) => {
     ProductApi.getOneProduct(req.params.id)
         .then((singleProduct) => {
 
@@ -34,7 +34,7 @@ productRouter.get('/product/:id', (req, res) => {
 
 //update
 
-productRouter.put('/product/:id', (req, res) => {
+productRouter.put('/:id', (req, res) => {
     ProductApi.updateProduct(req.params.id, req.body)
         .then((updateProduct) => {
             res.redirect(`/product/${req.params.id}`)
@@ -43,7 +43,7 @@ productRouter.put('/product/:id', (req, res) => {
 
 
 //create
-productRouter.post('/product', (req, res) => {
+productRouter.post('/', (req, res) => {
     ProductApi.createProduct(req.body)
         .then((createdProduct) => {
             res.redirect('/product')
@@ -51,7 +51,7 @@ productRouter.post('/product', (req, res) => {
 })
 
 //delete
-productRouter.delete('/product/:id', (req, res) => {
+productRouter.delete('/:id', (req, res) => {
     ProductApi.deleteProduct(req.params.id)
         .then((deletedProduct) => {
             res.redirect('/product')

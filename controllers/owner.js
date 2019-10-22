@@ -4,19 +4,19 @@ const OwnerApi = require('../models/Owner.js')
 
 const ownerRouter = express.Router()
 
-ownerRouter.get('/owner/edit/:id', (req, res) => {
+ownerRouter.get('/edit/:id', (req, res) => {
     OwnerApi.getOneOwner(req.params.id)
         .then((singleOwner) => {
             res.render('editOwnerForm', singleOwner)
         })
 })
 
-ownerRouter.get('/owner/new', (req, res) => {
+ownerRouter.get('/new', (req, res) => {
     res.render('createOwnerForm')
 })
 
 //getAll
-ownerRouter.get('/owner', (req, res) => {
+ownerRouter.get('/', (req, res) => {
     OwnerApi.getAllOwners()
         .then((allOwners) => {
             res.render('allOwners', { allOwners })
@@ -24,7 +24,7 @@ ownerRouter.get('/owner', (req, res) => {
 })
 
 //getOne
-ownerRouter.get('/owner/:id', (req, res) => {
+ownerRouter.get('/:id', (req, res) => {
     OwnerApi.getOneOwner(req.params.id)
         .then((singleOwner) => {
 
@@ -34,7 +34,7 @@ ownerRouter.get('/owner/:id', (req, res) => {
 
 //update
 
-ownerRouter.put('/owner/:id', (req, res) => {
+ownerRouter.put('/:id', (req, res) => {
     OwnerApi.updateOwner(req.params.id, req.body)
         .then((updateOwner) => {
             res.redirect(`/owner/${req.params.id}`)
@@ -43,7 +43,7 @@ ownerRouter.put('/owner/:id', (req, res) => {
 
 
 //create
-ownerRouter.post('/owner', (req, res) => {
+ownerRouter.post('/', (req, res) => {
     OwnerApi.createOwner(req.body)
         .then((createdOwner) => {
             res.redirect('/owner')
@@ -51,7 +51,7 @@ ownerRouter.post('/owner', (req, res) => {
 })
 
 //delete
-ownerRouter.delete('/owner/:id', (req, res) => {
+ownerRouter.delete('/:id', (req, res) => {
     OwnerApi.deleteOwner(req.params.id)
         .then((deletedOwner) => {
             res.redirect('/owner')
