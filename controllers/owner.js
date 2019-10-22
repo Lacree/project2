@@ -49,3 +49,15 @@ ownerRouter.post('/owner', (req, res) => {
             res.redirect('/owner')
         })
 })
+
+//delete
+ownerRouter.delete('/owner/:id', (req, res) => {
+    OwnerApi.deleteOwner(req.params.id)
+        .then((deletedOwner) => {
+            res.redirect('/owner')
+        })
+})
+
+module.exports = {
+    ownerRouter
+}
