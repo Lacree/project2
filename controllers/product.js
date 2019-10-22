@@ -1,4 +1,4 @@
-/*const express = require('express')
+const express = require('express')
 
 const ProductApi = require('../models/Product.js')
 
@@ -61,4 +61,3 @@ productRouter.delete('/:id', (req, res) => {
 module.exports = {
     productRouter
 }
-*/

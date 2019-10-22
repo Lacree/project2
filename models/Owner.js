@@ -1,4 +1,4 @@
-/*const mongoose = require('./connection.js')
+const mongoose = require('./connections.js')
 
 const OwnerSchema = new mongoose.Schema({
     name: String,
@@ -36,4 +36,3 @@ module.exports = {
     updateOwner,
     deleteOwner
 }
-*/
