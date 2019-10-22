@@ -1,0 +1,19 @@
+<h1>{{name}}</h1>
+
+<p1>{{ratio}}</p1>
+
+<p2>{{company}}</p2>
+
+<p3>{{notes}}</p3>
+
+
+
+<a href="/product/edit/{{_id}}">
+    <button>
+        Edit Product List
+    </button>
+</a>
+
+<form action="/product/{{_id}}?_method=DELETE" method="POST">
+    <input type="submit" value="Delete User" />
+</form>
