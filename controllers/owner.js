@@ -10,3 +10,8 @@ ownerRouter.get('/owner/edit/:id', (req, res) => {
             res.render('editOwnerForm', singleOwner)
         })
 })
+
+ownerRouter.get('/owner/new', (req, res) => {
+    res.render('createOwnerForm')
+})
+
