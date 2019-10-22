@@ -4,7 +4,7 @@ const ProductApi = require('../models/Product.js')
 
 const productRouter = express.Router()
 
-prodcutRouter.get('/edit/:id', (req, res) => {
+productRouter.get('/edit/:id', (req, res) => {
     ProductApi.getOneProduct(req.params.id)
         .then((singleProduct) => {
             res.render('editProductForm', singleProduct)

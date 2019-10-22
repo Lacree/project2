@@ -1,0 +1,11 @@
+<h1>All Business/Owners</h1>
+<a href="/owner/new">
+    <button>
+        Add your Business Information
+    </button>
+</a>
+<ul>
+    {{#each allOwners}}
+    <a href="/owner/{{_id}}">
+        <li>{{name}}</li>
+        {{/each}}
