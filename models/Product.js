@@ -1,4 +1,4 @@
-const mongoose = require('./connection..js')
+/*const mongoose = require('./connection..js')
 
 const ProductSchema = new mongoose.Schema({
     name: String,
@@ -36,3 +36,4 @@ module.exports = {
     updateProduct,
     deleteProduct
 }
+*/

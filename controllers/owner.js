@@ -1,4 +1,4 @@
-const express = require('express')
+/*const express = require('express')
 
 const OwnerApi = require('../models/Owner.js')
 
@@ -61,3 +61,4 @@ ownerRouter.delete('/:id', (req, res) => {
 module.exports = {
     ownerRouter
 }
+*/
