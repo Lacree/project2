@@ -1,38 +1,38 @@
-const mongoose = require('./connection.js')
+const mongoose = require('./owner.js')
 
-const UserSchema = new mongoose.Schema({
+const OwnerSchema = new mongoose.Schema({
     name: String,
-    age: Number,
+    created: Number,
     city: String,
     state: String
 })
 
-const UserCollection = mongoose.model('user', UserSchema)
+const OwnerCollection = mongoose.model('owner', OwnerSchema)
 
-const getAllUsers = () => {
-    return UserCollection.find({})
+const getAllOwners = () => {
+    return OwnerCollection.find({})
 }
 
-const getOneUser = (id) => {
-    return UserCollection.findById(id)
+const getOneOwner = (id) => {
+    return OwnerCollection.findById(id)
 }
 
-const createUser = (userData) => {
-    return UserCollection.create(userData)
+const createOwner = (ownerData) => {
+    return OwnerCollection.create(ownerData)
 }
 
-const updateUser = (id, userData) => {
-    return UserCollection.updateUser({ _id: id })
+const updateOwner = (id, ownerData) => {
+    return OwnerCollection.updateOwner({ _id: id })
 }
 
-const deleteUser = (id) => {
-    return UserCollection.deleteOne({ _id: id })
+const deleteOwner = (id) => {
+    return OwnerCollection.deleteOne({ _id: id })
 }
 
 module.exports = {
-    getAllUsers,
-    getOneUser,
-    createUser,
-    updateUser,
-    deleteUser
+    getAllOwners,
+    getOneOwner,
+    createOwner,
+    updateOwner,
+    deleteOwner
 }
