@@ -1,4 +1,4 @@
-const mongoose = require('./owner.js')
+const mongoose = require('./connection.js')
 
 const OwnerSchema = new mongoose.Schema({
     name: String,

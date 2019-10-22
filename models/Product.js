@@ -1,4 +1,4 @@
-const mongoose = require('./product.js')
+const mongoose = require('./connection..js')
 
 const ProductSchema = new mongoose.Schema({
     name: String,
