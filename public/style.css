@@ -48,14 +48,12 @@ table {
 }
 
 body{
-background: grey;
-background-size: cover;
+background-image: url(https://images.app.goo.gl/Cg4u5HHCwP1eQdQZ9);
 text-align: center;
 font-family: cursive;
 font-size: 40px;
 margin: auto;
 padding: 20px;
-display: block;
 }
 
 li{
@@ -65,3 +63,18 @@ padding: 10px;
 }
 
 
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    margin: auto;
+    padding: 20px;
+    color: rgba(245, 135, 66)
+}
+
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    margin: auto;
+    padding: 10px;
+    
+}
