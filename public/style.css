@@ -48,11 +48,14 @@ table {
 }
 
 body{
-background-image: url(https://hhp-blog.s3.amazonaws.com/2018/08/iStock-1015545230-640x427.jpg);
+background: grey;
 background-size: cover;
 text-align: center;
 font-family: cursive;
 font-size: 40px;
+margin: auto;
+padding: 20px;
+display: block;
 }
 
 li{
@@ -60,4 +63,5 @@ text-align: center;
 color: green;
 padding: 10px;
 }
+
 
