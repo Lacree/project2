@@ -19,7 +19,7 @@ userRouter.get('/new', (req, res) => {
 userRouter.get('/', (req, res) => {
     UserApi.getAllUsers()
         .then((allUsers) => {
-            res.render('allUsers', { allUsers })
+            res.render('allusers', { allUsers })
         })
 })
 
