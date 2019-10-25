@@ -18,7 +18,7 @@ app.use(express.static(__dirname + "/public"))
 
 app.set('view engine', 'hbs')
 
-//app.use('/', indexRouter)
+app.use('/', indexRouter)
 app.use('/user', userRouter)
 app.use('/product', productRouter)
 app.use('/owner', ownerRouter)
