@@ -19,7 +19,7 @@ productRouter.get('/new', (req, res) => {
 productRouter.get('/', (req, res) => {
     ProductApi.getAllProducts()
         .then((allProducts) => {
-            res.render('allProducts', { allProducts })
+            res.render('allproducts', { allProducts })
         })
 })
 
