@@ -37,7 +37,7 @@ productRouter.get('/:id', (req, res) => {
 productRouter.put('/:id', (req, res) => {
     ProductApi.updateProduct(req.params.id, req.body)
         .then((updateProduct) => {
-            res.redirect(`/product/${req.params.id}`)
+            res.redirect(`/Product/${req.params.id}`)
         })
 })
 
