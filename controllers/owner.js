@@ -37,7 +37,7 @@ ownerRouter.get('/:id', (req, res) => {
 ownerRouter.put('/:id', (req, res) => {
     OwnerApi.updateOwner(req.params.id, req.body)
         .then((updatedOwner) => {
-            res.redirect(`/Owner/${req.params.id}`)
+            res.redirect(`/owner/${req.params.id}`)
         })
 })
 

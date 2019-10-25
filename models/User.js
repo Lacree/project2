@@ -22,7 +22,7 @@ const createUser = (userData) => {
 }
 
 const updateUser = (id, userData) => {
-    return UserCollection.updateUser({ _id: id })
+    return UserCollection.updateOne({ _id: id }, userData)
 }
 
 const deleteUser = (id) => {
