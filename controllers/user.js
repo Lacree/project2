@@ -37,7 +37,7 @@ userRouter.get('/:id', (req, res) => {
 userRouter.put('/:id', (req, res) => {
     UserApi.updateUser(req.params.id, req.body)
         .then((updatedUser) => {
-            res.redirect(`/user/${req.params.id}`)
+            res.redirect(`/User/${req.params.id}`)
         })
 })
 
